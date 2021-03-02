@@ -1,5 +1,6 @@
 'use strict';
 
+let arr = [];
 
 confirm("Hello.. lets start the guessing Questions:");
 
@@ -113,22 +114,22 @@ let counterQ6 = 0;
         }else if (years === 5){
             alert("your answer is higher than the correct answer but its very close");
             years =parseInt(prompt("How many years have you studied at university? \n Answer with a number"));
-            ++counterQ6;           
+            counterQ6 += 1;           
         }else if (years === 3){
             alert("your answer is lower than the correct answer but its very close");
             years =parseInt(prompt("How many years have you studied at university? \n Answer with a number"));
-            ++counterQ6;           
+            counterQ6 += 1;          
         }else if (years < 3 ){
             alert("your answer is too low than the correct answer");
             years =parseInt(prompt("How many years have you studied at university? \n Answer with a number"));
-            ++counterQ6;           
+            counterQ6 += 1;          
         }else if (years > 5 ){
             alert("your answer is too high than the correct answer");
             years =parseInt(prompt("How many years have you studied at university? \n Answer with a number"));
-            ++counterQ6;           
+            counterQ6 += 1;           
         }else {
             alert("please answer with number only");
-            ++counterQ6;
+            counterQ6 += 1;
         }
 
         if (counterQ6 === 4){
@@ -147,8 +148,8 @@ let counterQ6 = 0;
     let counterQ7 = 0
     let m = 0;
         do {
-         uni = prompt("There are many universities that I have visited guess one of them. \n Answer the question by writing the abbreviation of the name of the university ");
-          switch(uni.toUpperCase()){
+         uni = prompt("There are many universities that I have visited guess one of them. \n Answer the question by writing the abbreviation of the name of the university ").toUpperCase();
+          switch(uni){
               case uniName[0] : alert("your answer is correct GOOD JOB");
               console.log("the 7th your answer is correct");
               m = 1;
@@ -192,7 +193,7 @@ let counterQ6 = 0;
               break;
 
               default : alert("Incorect Answer");
-              ++counterQ7;
+              counterQ7 += 1;;
               break;
           }
 
@@ -212,6 +213,9 @@ let counterQ6 = 0;
     }else {
         alert("you have answerd "+counter+" questiones with a correct answer");
     }
+
+
+
 
 document.getElementById("answers").innerHTML = "The correct answers = "+counter+" The incorrect answers = "+counter1;
 

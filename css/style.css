@@ -8,7 +8,11 @@ h4 {
     color: coral;
 }
 
-ul {
+div {
     text-align: center;
 }
 
+ul {
+    list-style-position: inside;
+    color: coral;
+}
