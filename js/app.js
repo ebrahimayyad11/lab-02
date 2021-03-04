@@ -1,114 +1,94 @@
 'use strict';
 
 
-function input (qName){
-  let qq = prompt(qName);
-  return qq ;
+
+
+function checkAnswer(q1Name,correctAnswer,showUser){
+   let incorrectAnswer1 ;
+   let incorrectAnswer2 ;
+    let correctAnswer2;
+   let answer ;
+    if (correctAnswer=='yes'){
+    correctAnswer2='y';
+    incorrectAnswer1='no';
+    incorrectAnswer2='n';
+
+    }else{
+        correctAnswer2='n';
+        incorrectAnswer1='yes';
+    incorrectAnswer2='y';
+    }
+    let i = 0;
+    while (i == 0){
+        if (q1Name.toLowerCase() == correctAnswer || q1Name.toLowerCase() == correctAnswer2){
+            alert("your answer is correct");
+            console.log("your answer is correct");
+           answer = 'yes';
+            i = 1;
+           
+        }else if (q1Name.toLowerCase() == incorrectAnswer1 || q1Name.toLowerCase() == incorrectAnswer2){
+            alert("your answer is incorrect " + showUser );
+            console.log(" your answer is incorrect"); 
+             answer = 'no';
+             i = 1;  
+                  
+        }else {
+          q1Name=prompt('please just answer with \n yes(Y) or no(N)');
+        }
+    }
+   return  answer;           
 }
 
 
-
 let arr = [];
+let arr2 =[];
 
 confirm("Hello.. lets start the guessing Questions:");
 
 // the first question that the user should guess
-let Name = input('Is my name Ebrahim? \n Answer with: \n yes(Y) or no(N)');
-let i = 0;
-let counter = 0;
-    while (i == 0){
-        if (Name.toLowerCase() == "yes" || Name.toLowerCase() == "y"){
-            alert("your answer is correct");
-            console.log("the first your answer is correct");
-            i = 1;
-            counter++;
-        }else if (Name.toLowerCase() == "no" || Name.toLowerCase() == "n"){
-            alert("your answer is incorrect my name is ebrahim");
-            console.log("the first your answer is incorrect"); 
-            i = 1;           
-        }else {
-            Name = prompt("Is my name Ebrahim? \n please just answer with \n yes(Y) or no(N)");
-        }
-    }
+let Name = prompt('Is my name Ebrahim? \n Answer with: \n yes(Y) or no(N)');
+arr2.push(checkAnswer(Name,'yes','My Name Is Ebrahim'));
 
+
+
+
+let counter = 0;
+   
 
 // the second question that the user should guess
-let age =input('Am I 26 years old? \n Answer with: \n yes(Y) or no(N)');
-let j = 0;
-    while (j == 0){
-        if (age.toLowerCase() == "yes" || age.toLowerCase() == "y"){
-            alert("your answer is incorrect my old is 24");
-            console.log("the second your answer is incorrect "); 
-            j = 1;
-        }else if (age.toLowerCase() == "no" || age.toLowerCase() == "n"){
-            alert("your answer is correct");
-            console.log("the second your answer is correct");
-            j = 1;
-            counter++;           
-        }else {
-            age = prompt("Am I 26 years old? \n please just answer with \n yes(Y) or no(N)");
-        }
-    }
+let age =prompt('Am I 26 years old? \n Answer with: \n yes(Y) or no(N)');
+arr2.push(checkAnswer(age,'no','My Age Is 24'));
+
+
 
 // the third question that the user should guess
-let university =input('Did I study at the University of Jordan? \n Answer with: \n yes(Y) or no(N)');
-let h = 0;
-    while (h == 0){
-        if (university.toLowerCase() == "yes" || university.toLowerCase() == "y"){
-            alert("your answer is incorrect I studied in The Hashemite University");
-            console.log("the third your answer is incorrect"); 
-            h = 1;
-        }else if (university.toLowerCase() == "no" || university.toLowerCase() == "n"){
-            alert("your answer is correct");
-            console.log("the third your answer is correct");
-            h = 1;
-            counter++;           
-        }else {
-            university = prompt("Did I study at the University of Jordan? \n Am I 26 years old? \n please just answer with \n yes(Y) or no(N)");
-        }
-    }
-
+let university =prompt('Did I study at the University of Jordan? \n Answer with: \n yes(Y) or no(N)');
+arr2.push(checkAnswer(university,'no','I studied at hashamite University'));
 
 
 // the 4th question that the user should guess
-let major = input('Is my major is software engineering? \n Answer with: \n yes(Y) or no(N)');
-let t = 0;
-    while (t === 0){
-        if (major.toLowerCase() === "yes" || major.toLowerCase() === "y"){
-            alert("your answer is correct");
-            console.log("the 4th your answer is correct");
-            t = 1;
-            counter++;
-        }else if (major.toLowerCase() == "no" || major.toLowerCase() == "n"){
-            alert("your answer is incorrect I studied software engineering");
-            console.log("the 4th your answer is incorrect"); 
-            t = 1;           
-        }else {
-            major = prompt("Is my major is software engineering? \n Am I 26 years old? \n please just answer with \n yes(Y) or no(N)");
-        }
-    }
+let major = prompt('Is my major is software engineering? \n Answer with: \n yes(Y) or no(N)');
+arr2.push(checkAnswer(major,'yes','My major is software engineering '));
 
 
 // the 5th question that the user should guess
-let gpa =input('Is my college GPA = 2.3? \n Answer with: \n yes(Y) or no(N)');
-let o = 0;
-    while (o === 0){
-        if (gpa.toLowerCase() === "yes" || gpa.toLowerCase() === "y"){
-            alert("your answer is correct");
-            console.log("the 5th your answer is correct");
-            o = 1;
-            counter++;
-        }else if (gpa.toLowerCase() === "no" || gpa.toLowerCase() === "n"){
-            alert("your answer is incorrect my GPA = 2.3");
-            console.log("the 5th your answer is incorrect"); 
-            o = 1;           
-        }else {
-            gpa = prompt("Is my college GPA = 2.3? \n please just answer with \n yes(Y) or no(N)");
-        }
+let gpa =prompt('Is my college GPA = 2.3? \n Answer with: \n yes(Y) or no(N)');
+arr2.push(checkAnswer(gpa,'yes','my college GPA = 2.3'));
+
+for(let i =0 ;i<arr2.length;i++){
+    if(arr2[i]=='yes')
+    {
+        counter++;
     }
+
+}
 
 
 // hte 6th question that the user should guess
+
+
+
+
 let years;
 let r = 0;
 let counterQ6 = 0;
