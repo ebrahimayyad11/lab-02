@@ -1,11 +1,19 @@
 'use strict';
 
+
+function input (qName){
+  let qq = prompt(qName);
+  return qq ;
+}
+
+
+
 let arr = [];
 
 confirm("Hello.. lets start the guessing Questions:");
 
 // the first question that the user should guess
-let Name = prompt("Is my name Ebrahim? \n Answer with: \n yes(Y) or no(N)");
+let Name = input('Is my name Ebrahim? \n Answer with: \n yes(Y) or no(N)');
 let i = 0;
 let counter = 0;
     while (i == 0){
@@ -25,7 +33,7 @@ let counter = 0;
 
 
 // the second question that the user should guess
-let age = prompt("Am I 26 years old? \n Answer with: \n yes(Y) or no(N)");
+let age =input('Am I 26 years old? \n Answer with: \n yes(Y) or no(N)');
 let j = 0;
     while (j == 0){
         if (age.toLowerCase() == "yes" || age.toLowerCase() == "y"){
@@ -43,7 +51,7 @@ let j = 0;
     }
 
 // the third question that the user should guess
-let university = prompt("Did I study at the University of Jordan? \n Answer with: \n yes(Y) or no(N)");
+let university =input('Did I study at the University of Jordan? \n Answer with: \n yes(Y) or no(N)');
 let h = 0;
     while (h == 0){
         if (university.toLowerCase() == "yes" || university.toLowerCase() == "y"){
@@ -63,7 +71,7 @@ let h = 0;
 
 
 // the 4th question that the user should guess
-let major = prompt("Is my major is software engineering? \n Answer with: \n yes(Y) or no(N)");
+let major = input('Is my major is software engineering? \n Answer with: \n yes(Y) or no(N)');
 let t = 0;
     while (t === 0){
         if (major.toLowerCase() === "yes" || major.toLowerCase() === "y"){
@@ -82,7 +90,7 @@ let t = 0;
 
 
 // the 5th question that the user should guess
-let gpa = prompt("Is my college GPA = 2.3? \n Answer with: \n yes(Y) or no(N)");
+let gpa =input('Is my college GPA = 2.3? \n Answer with: \n yes(Y) or no(N)');
 let o = 0;
     while (o === 0){
         if (gpa.toLowerCase() === "yes" || gpa.toLowerCase() === "y"){
