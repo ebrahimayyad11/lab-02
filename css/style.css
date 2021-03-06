@@ -1,18 +1,44 @@
+body{
+background-color: black;
+
+}
+
+
 h1 {
     text-align: center;
-    color: aqua;
+    color: antiquewhite;
+    border-style: solid;
+    border-color: antiquewhite;
+    border-width:  600px;
+    border-top: black;
+    border-bottom:  black;
+    
 }
 
 h4 {
     text-align: center;
-    color: coral;
+    color: antiquewhite;
+    border-style: solid;
+    border-color: antiquewhite;
+    border-top: black;   
+     border-width:  250px;
+    border-bottom: black;
 }
 
 div {
     text-align: center;
+    
 }
 
 ul {
     list-style-position: inside;
-    color: coral;
+    color: antiquewhite;
+}
+
+li{
+    background-color: antiquewhite;
+    color: black;
+    width: 500px;
+    position: relative;
+    left: 380px;
 }

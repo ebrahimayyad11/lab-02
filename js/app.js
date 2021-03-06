@@ -22,13 +22,11 @@ function checkAnswer(q1Name,correctAnswer,showUser){
     while (i == 0){
         if (q1Name.toLowerCase() == correctAnswer || q1Name.toLowerCase() == correctAnswer2){
             alert("your answer is correct");
-            console.log("your answer is correct");
            answer = 'yes';
             i = 1;
            
         }else if (q1Name.toLowerCase() == incorrectAnswer1 || q1Name.toLowerCase() == incorrectAnswer2){
             alert("your answer is incorrect " + showUser );
-            console.log(" your answer is incorrect"); 
              answer = 'no';
              i = 1;  
                   
@@ -45,7 +43,7 @@ let arr2 =[];
 
 confirm("Hello.. lets start the guessing Questions:");
 
-// the first question that the user should guess
+
 let Name = prompt('Is my name Ebrahim? \n Answer with: \n yes(Y) or no(N)');
 arr2.push(checkAnswer(Name,'yes','My Name Is Ebrahim'));
 
@@ -55,25 +53,24 @@ arr2.push(checkAnswer(Name,'yes','My Name Is Ebrahim'));
 let counter = 0;
    
 
-// the second question that the user should guess
 let age =prompt('Am I 26 years old? \n Answer with: \n yes(Y) or no(N)');
 arr2.push(checkAnswer(age,'no','My Age Is 24'));
 
 
 
-// the third question that the user should guess
+
 let university =prompt('Did I study at the University of Jordan? \n Answer with: \n yes(Y) or no(N)');
 arr2.push(checkAnswer(university,'no','I studied at hashamite University'));
 
 
-// the 4th question that the user should guess
 let major = prompt('Is my major is software engineering? \n Answer with: \n yes(Y) or no(N)');
 arr2.push(checkAnswer(major,'yes','My major is software engineering '));
 
 
-// the 5th question that the user should guess
 let gpa =prompt('Is my college GPA = 2.3? \n Answer with: \n yes(Y) or no(N)');
 arr2.push(checkAnswer(gpa,'yes','my college GPA = 2.3'));
+
+
 
 for(let i =0 ;i<arr2.length;i++){
     if(arr2[i]=='yes')
@@ -84,7 +81,6 @@ for(let i =0 ;i<arr2.length;i++){
 }
 
 
-// hte 6th question that the user should guess
 
 
 
@@ -96,7 +92,6 @@ let counterQ6 = 0;
         years =parseInt(prompt("How many years have you studied at university? \n Answer with a number"));
         if (years === 4){
             alert("your answer is correct");
-            console.log("the 6th your answer is correct");
             r = 1;
             counter++;
         }else if (years === 5){
@@ -122,7 +117,6 @@ let counterQ6 = 0;
 
         if (counterQ6 === 4){
             alert("You have Exhausted all the chances \n The correct answer is 4");
-            console.log("the 6th your answer is incorrect");
             r = 1;
         }
 
@@ -130,7 +124,7 @@ let counterQ6 = 0;
 
 
 
-    // the 7th question that the user should guess
+   
     let uniName = ['HU','JU','PSUT','JUST','AABU','UOP','ZUJ'];
     let uni;
     let counterQ7 = 0
@@ -139,43 +133,36 @@ let counterQ6 = 0;
          uni = prompt("There are many universities that I have visited guess one of them. \n Answer the question by writing the abbreviation of the name of the university ").toUpperCase();
           switch(uni){
               case uniName[0] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[1] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[2] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[3] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[4] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[5] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
 
               case uniName[6] : alert("your answer is correct GOOD JOB");
-              console.log("the 7th your answer is correct");
               m = 1;
               counter++
               break;
@@ -187,7 +174,6 @@ let counterQ6 = 0;
 
           if (counterQ7 === 6){
               alert("You have Exhausted all the chances \n The correct answers are: \n"+ uniName);
-              console.log("the 7th your answer is incorrect");
               m = 1;
           }
         }while (m === 0);
